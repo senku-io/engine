@@ -1,26 +1,253 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* :root {
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* Base */
+
+.prose {
+  @apply text-gray-800 leading-relaxed text-base;
+}
+
+/* Headings */
+
+.prose h1 {
+  @apply text-3xl font-semibold mt-8 mb-4 border-b pb-2;
+}
+
+.prose h2 {
+  @apply text-2xl font-semibold mt-8 mb-3;
+}
+
+.prose h3 {
+  @apply text-xl font-semibold mt-6 mb-2;
+}
+
+.prose h4 {
+  @apply text-lg font-semibold mt-5 mb-2;
+}
+
+.prose h5 {
+  @apply text-base font-semibold mt-4 mb-1;
+}
+
+.prose h6 {
+  @apply text-sm font-semibold text-gray-500 mt-4 mb-1;
+}
+
+/* Paragraph */
+
+.prose p {
+  @apply mb-4;
+}
+
+/* Links */
+
+.prose a {
+  @apply text-blue-600 underline underline-offset-2 hover:text-blue-500;
+}
+
+/* Lists */
+
+.prose ul {
+  @apply list-disc pl-5 mb-4;
+}
+
+.prose ol {
+  @apply list-decimal pl-5 mb-4;
+}
+
+.prose li {
+  @apply mb-1;
+}
+
+/* Nested lists */
+
+.prose ul ul,
+.prose ol ol {
+  @apply mt-1 mb-1;
+}
+
+/* Blockquote */
+
+.prose blockquote {
+  @apply border-l-4 border-yellow-500 bg-yellow-50 text-yellow-900 px-4 py-3 my-4 rounded;
+}
+
+/* Horizontal rule */
+
+.prose hr {
+  @apply my-8 border-gray-300;
+}
+
+/* Code inline */
+
+.prose code {
+  @apply bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.prose code::before,
+.prose code::after {
+  content: "";
+}
+
+/* Code block */
+
+.prose pre {
+  @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6 text-sm;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+/* Tables */
+
+.prose table {
+  @apply w-full border-collapse my-6 text-sm;
+}
+
+.prose thead {
+  @apply bg-gray-100;
+}
+
+.prose th {
+  @apply border border-gray-300 px-3 py-2 text-left font-semibold;
+}
+
+.prose td {
+  @apply border border-gray-300 px-3 py-2;
+}
+
+/* Images */
+
+.prose img {
+  @apply rounded-lg my-4 max-w-full;
+}
+
+/* Strong / emphasis */
+
+.prose strong {
+  @apply font-semibold;
+}
+
+.prose em {
+  @apply italic;
+}
+
+/* Strikethrough */
+
+.prose del {
+  @apply line-through text-gray-500;
+}
+
+/* Definition lists (if used) */
+
+.prose dl {
+  @apply my-4;
+}
+
+.prose dt {
+  @apply font-semibold;
+}
+
+.prose dd {
+  @apply ml-4 mb-2;
+}
+
+/* Keyboard input */
+
+.prose kbd {
+  @apply bg-gray-200 border border-gray-300 rounded px-1 text-xs font-mono;
+}
+
+/* Superscript / subscript */
+
+.prose sup {
+  @apply text-xs align-super;
+}
+
+.prose sub {
+  @apply text-xs align-sub;
+}
+
+/* Task lists (if enabled later) */
+
+.prose input[type="checkbox"] {
+  @apply mr-2;
+}
+
+/* Highlight (if plugin later) */
+
+.prose mark {
+  @apply bg-yellow-200 px-1 rounded;
+}
+
+/* Scroll behavior for large content */
+
+.prose {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+
+.prose ::selection {
+  @apply bg-blue-200;
+}
+
+/* Dark mode */
+
+.dark .prose {
+  @apply text-gray-200;
+}
+
+.dark .prose h6 {
+  @apply text-gray-400;
+}
+
+.dark .prose a {
+  @apply text-blue-400 hover:text-blue-300;
+}
+
+.dark .prose code {
+  @apply bg-gray-800;
+}
+
+.dark .prose pre {
+  @apply bg-gray-800;
+}
+
+.dark .prose blockquote {
+  @apply bg-yellow-900 text-yellow-100 border-yellow-400;
+}
+
+.dark .prose table thead {
+  @apply bg-gray-800;
+}
+
+.dark .prose th,
+.dark .prose td {
+  @apply border-gray-600;
 }
