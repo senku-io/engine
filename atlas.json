@@ -5,7 +5,8 @@
   "nodes": {
     "coal": {
       "path": "recipes/coal.md",
-      "title": "Coal"
+      "title": "Coal",
+      "type": "metal"
     }
   }
 }
