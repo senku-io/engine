@@ -34,19 +34,19 @@ body {
 /* Headings */
 
 .prose h1 {
-  @apply text-3xl font-semibold mt-8 mb-4 border-b pb-2;
+  @apply text-3xl font-semibold my-4 border-b pb-2;
 }
 
 .prose h2 {
-  @apply text-2xl font-semibold mt-8 mb-3;
+  @apply text-2xl font-semibold my-2;
 }
 
 .prose h3 {
-  @apply text-xl font-semibold mt-6 mb-2;
+  @apply text-xl font-semibold my-2;
 }
 
 .prose h4 {
-  @apply text-lg font-semibold mt-5 mb-2;
+  @apply text-lg font-semibold my-2;
 }
 
 .prose h5 {
@@ -72,7 +72,7 @@ body {
 /* Lists */
 
 .prose ul {
-  @apply list-disc pl-5 mb-4;
+  @apply list-disc pl-5 mb-2;
 }
 
 .prose ol {
@@ -99,7 +99,7 @@ body {
 /* Horizontal rule */
 
 .prose hr {
-  @apply my-8 border-gray-300;
+  @apply border-gray-400/25;
 }
 
 /* Code inline */
@@ -250,4 +250,9 @@ body {
 .dark .prose th,
 .dark .prose td {
   @apply border-gray-600;
+}
+
+.items::-webkit-scrollbar, .items::-webkit-scrollbar-button, .items::-webkit-scrollbar-thumb {
+  display: hidden;
+  scrollbar-width: none;
 }
