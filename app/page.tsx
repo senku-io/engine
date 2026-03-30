@@ -8,40 +8,7 @@ export default async function Home() {
     return (
         <div className="mx-auto w-4xl">
             {/* Header */}
-            <header className="">
-                {/* Nav bar */}
-                <nav className="flex justify-between items-center">
-                    <Link href={"/"}>
-                        <h2 className="font-medium text-xl">
-                            Senku <span className="text-[#28ED58]">IO</span>
-                        </h2>
-                    </Link>
-
-                    <ul className="flex gap-4 items-center">
-                        <li className="font-light hover:font-normal">
-                            <a href="">Library</a>
-                        </li>
-                        <li className="font-light hover:font-normal">
-                            <a href="">Contribute</a>
-                        </li>
-                        <li className="font-light hover:font-normal">
-                            <a href="">About</a>
-                        </li>
-                        <li>
-                            <label htmlFor="search" className="sr-only">
-                                Search recipie
-                            </label>
-                            <input
-                                type="text"
-                                name="search"
-                                id="search"
-                                placeholder="Search survival knowledge"
-                                
-                            />
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+            <Header />
 
             {/* Main Section */}
             <main className="flex flex-col text-center items-center gap-4 min-h-screen">
@@ -72,19 +39,7 @@ export default async function Home() {
                 ))}
             </main>
             {/* Footer */}
-            <footer>
-                <ul className="flex gap-4 justify-center items-center">
-                    <li>
-                        <a href="">Docs</a>
-                    </li>
-                    <li>
-                        <a href="">GitHub</a>
-                    </li>
-                    <li>
-                        <a href="">Contribute</a>
-                    </li>
-                </ul>
-            </footer>
+            <Footer />
         </div>
     );
 }

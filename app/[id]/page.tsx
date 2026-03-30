@@ -24,11 +24,11 @@ export default async function Page({
     const data = converter.render(content);
 
     return (
-        <div className="prose">
-            <article
-                className="mx-8"
-                dangerouslySetInnerHTML={{ __html: data }}
-            ></article>
+            <Header />
+
+
+            {/* Footer */}
+            <Footer />
         </div>
     );
 }
