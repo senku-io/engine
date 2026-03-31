@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import { searchNodes } from "@/lib/search";
 import { useState } from "react";
 
-type typeType = {
+type IconMapType = {
     [key: string]: string;
 };
 
@@ -18,6 +18,9 @@ export default function Home() {
 
     // Search data from raw
     const [sr, setSr] = useState(search.nodes);
+
+    // Icons Map for indication
+    const typeIcons: IconMapType = {
         metal: "/pickaxe.png",
     };
 
@@ -47,7 +50,7 @@ export default function Home() {
                     id="main-search"
                     placeholder="Search"
                     onChange={(e) =>
-                        console.log(
+                        setSr(
                             searchNodes(e.currentTarget.value, search.nodes),
                         )
                     }
@@ -56,7 +59,7 @@ export default function Home() {
 
                 {/* Items */}
                 <div className="h-[42dvh] overflow-y-scroll p-2 shadow-lg border border-neutral-500/25 rounded-md items">
-                    {Object.keys(search.nodes).map((items, index) => (
+                    {Object.keys(sr).map((items, index) => (
                         <Link
                             href={"/" + items}
                             key={index}
