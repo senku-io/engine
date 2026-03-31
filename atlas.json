@@ -6,7 +6,14 @@
     "coal": {
       "path": "recipes/coal.md",
       "title": "Coal",
-      "type": "metal"
+      "type": "metal",
+      "keywords": ["coal", "charcoal", "carbon"]
+    },
+    "charcoal": {
+      "path": "recipes/coal.md",
+      "title": "Charcoal",
+      "type": "metal",
+      "keywords": ["coal", "charcoal", "carbon"]
     }
   }
 }
