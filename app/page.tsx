@@ -7,6 +7,7 @@ import { Atlas } from "@/types/atlas";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { searchNodes } from "@/lib/search";
+import { useState } from "react";
 
 type typeType = {
     [key: string]: string;
@@ -15,7 +16,8 @@ type typeType = {
 export default function Home() {
     const search = raw as Atlas;
 
-    const typeIcons: typeType = {
+    // Search data from raw
+    const [sr, setSr] = useState(search.nodes);
         metal: "/pickaxe.png",
     };
 
