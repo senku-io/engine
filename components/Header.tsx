@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import Logo from "@/app/assets/images/logo.png"
 
 function Header() {
     return (
@@ -7,7 +9,8 @@ function Header() {
             <header className="">
                 {/* Nav bar */}
                 <nav className="h-20 flex items-center justify-between border-b border-gray-100">
-                    <Link href={"/"}>
+                    <Link href={"/"} className="flex gap-2 items-center outline-0">
+                        <Image src={Logo} alt="" width={32} height={32} className="rounded-md" />
                         <h2 className="text-xl font-bold tracking-tight text-[#141414]">
                             Senku <span className="text-[#28ED58]">IO</span>
                         </h2>
