@@ -8,10 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { searchNodes } from "@/lib/search";
 import { useState } from "react";
-
-type IconMapType = {
-    [key: string]: string;
-};
+import { typeIcons } from "@/constants/iconType";
 
 export default function Home() {
     const search = raw as Atlas;
