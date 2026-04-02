@@ -8,18 +8,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { searchNodes } from "@/lib/search";
 import { useState } from "react";
-import { typeIcons } from "@/constants/iconType";
+import { IconMap } from "@/constants/iconMap";
 
 export default function Home() {
     const search = raw as Atlas;
 
     // Search data from raw
     const [sr, setSr] = useState(search.nodes);
-
-    // Icons Map for indication
-    const typeIcons: IconMapType = {
-        metal: "/pickaxe.png",
-    };
 
     return (
         <div className="min-h-screen font-sans antialiased text-[#141414] max-w-275 mx-auto px-6">
@@ -63,7 +58,7 @@ export default function Home() {
                             className="flex items-center gap-4 px-6 py-4 border-b border-gray-500/25 hover:bg-[#F4FBF6] transition-colors cursor-pointer group"
                         >
                             <Image
-                                src={typeIcons[search.nodes[items].type]}
+                                src={IconMap[search.nodes[items].type]}
                                 alt="icon"
                                 width={32}
                                 height={32}
