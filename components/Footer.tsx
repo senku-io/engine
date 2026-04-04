@@ -14,6 +14,7 @@ function Footer() {
                         <a href="">Contribute</a>
                     </li>
                 </ul>
+                <a href="https://www.flaticon.com/free-icons" className="flex justify-center gap-6 text-[13px] text-gray-600 hover:text-gray-900" title="Icons">Icons created by Flat Icons - Flaticon</a>
             </footer>
         </>
     );
