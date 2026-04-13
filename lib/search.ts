@@ -1,6 +1,11 @@
 import { Atlas, AtlasNode } from "@/types/atlas";
 
-export function searchNodes(query: string, nodes: Atlas["nodes"]) {
+export function searchNodes(
+    query: string,
+    nodes: Atlas["nodes"],
+    mode: keyof AtlasNode | "all" = "all",
+    limit?: number,
+) {
     const q = query.toLowerCase();
 
     let result: Record<string, AtlasNode> = {};
