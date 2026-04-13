@@ -11,7 +11,7 @@ function Header() {
                 <nav className="h-20 flex items-center justify-between border-b border-gray-100">
                     <Link
                         href={"/"}
-                        className="flex gap-2 items-center outline-0"
+                        className="flex gap-2 items-center"
                     >
                         <Image
                             src={Logo}
@@ -27,10 +27,10 @@ function Header() {
 
                     <ul className="flex gap-4 items-center">
                         <li className="flex gap-8 text-sm font-medium text-gray-600 hover:text-[#141414] transition-colors">
-                            <a href="">Library</a>
+                            <Link href="/library" title="Library">Library</Link>
                         </li>
                         <li className="flex gap-8 text-sm font-medium text-gray-600 hover:text-[#141414] transition-colors">
-                            <a href="">Contribute</a>
+                            <a href="https://www.github.com/senku-io/"  target="_blank" title="Senku.io GitHub" rel="noopener noreferrer">Contribute</a>
                         </li>
                         <li className="flex gap-8 text-sm font-medium text-gray-600 hover:text-[#141414] transition-colors">
                             <a href="">About</a>
