@@ -6,11 +6,14 @@ export function searchNodes(query: string, nodes: Atlas["nodes"]) {
     let result: Record<string, AtlasNode> = {};
 
     const rawResult = Object.entries(nodes).filter(([key, value]) => {
-        return (
-            key.includes(q) ||
-            value.keywords.includes(q) ||
-            value.title.toLowerCase() === q
-        );
+        if (mode === "all")
+            return (
+                key.includes(q) ||
+                value.keywords.includes(q) ||
+                value.title.toLowerCase() === q
+            );
+
+        return value[mode].includes(q);
     });
 
     rawResult.slice(0, limit ? limit : rawResult.length).forEach((raw) => {
