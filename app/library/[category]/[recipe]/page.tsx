@@ -1,11 +1,10 @@
 import MarkdownIt from "markdown-it";
 import { loadMarkdown } from "@/lib/loader";
 import { formatMarkdown } from "@/lib/parser";
-import raw from "../../atlas.json";
+import raw from "../../../../atlas.json";
 import { Atlas } from "@/types/atlas";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Link from "next/link";
 import Breadcrumps from "@/components/Breadcrumps";
 
 const converter = new MarkdownIt({
@@ -14,16 +13,16 @@ const converter = new MarkdownIt({
     typographer: true,
 });
 
-export default async function Page({
+export default async function Recipe({
     params,
 }: {
-    params: Promise<{ id: string }>;
+    params: Promise<{ category: string, recipe: string }>;
 }) {
-    const { id } = await params;
+    const { category, recipe } = await params;
 
     const items = raw as Atlas;
 
-    const md = await loadMarkdown(items.nodes[id].path);
+    const md = await loadMarkdown(items.nodes[recipe].path);
     const { metadata, content } = formatMarkdown(md);
     const data = converter.render(content);
 
@@ -36,7 +35,7 @@ export default async function Page({
             <Breadcrumps
                 navigations={{
                     library: "/library",
-                    [metadata.type]: "/" + metadata.type,
+                    [category]: "/" + category,
                     [metadata.name]: "/" + metadata.name,
                 }}
             />
