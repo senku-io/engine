@@ -13,8 +13,8 @@ export function searchNodes(query: string, nodes: Atlas["nodes"]) {
         );
     });
 
-    rawResult.forEach(raw => {
-        result[raw[0]] = raw[1]
+    rawResult.slice(0, limit ? limit : rawResult.length).forEach((raw) => {
+        result[raw[0]] = raw[1];
     });
 
     return result;
