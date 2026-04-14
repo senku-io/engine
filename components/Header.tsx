@@ -8,7 +8,7 @@ function Header() {
             {/* Header */}
             <header className="">
                 {/* Nav bar */}
-                <nav className="h-20 flex items-center justify-between border-b border-gray-100">
+                <nav className="h-20 flex items-center justify-between border-b border-neutral-300">
                     <Link
                         href={"/"}
                         className="flex gap-2 items-center"
