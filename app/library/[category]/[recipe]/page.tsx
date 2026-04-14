@@ -1,7 +1,7 @@
 import MarkdownIt from "markdown-it";
 import { loadMarkdown } from "@/lib/loader";
 import { formatMarkdown } from "@/lib/parser";
-import raw from "../../../../atlas.json";
+import raw from "@/atlas.json";
 import { Atlas } from "@/types/atlas";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";

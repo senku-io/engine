@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import raw from "../atlas.json";
+import raw from "@/atlas.json";
 import Image from "next/image";
 import { Atlas } from "@/types/atlas";
 import Header from "@/components/Header";
