@@ -1,19 +1,19 @@
 {
-  "version": 1,
-  "generated_at": "2026-03-24T10:00:00Z",
+    "version": 1,
+    "generated_at": "2026-03-24T10:00:00Z",
 
-  "nodes": {
-    "coal": {
-      "path": "recipes/coal.md",
-      "title": "Coal",
-      "type": "metal",
-      "keywords": ["coal", "charcoal", "carbon"]
-    },
-    "charcoal": {
-      "path": "recipes/coal.md",
-      "title": "Charcoal",
-      "type": "metal",
-      "keywords": ["coal", "charcoal", "carbon"]
+    "nodes": {
+        "coal": {
+            "path": "recipes/coal.md",
+            "title": "Coal",
+            "type": "material",
+            "keywords": ["coal", "charcoal", "carbon"]
+        },
+        "boiled_fish": {
+            "path": "recipes/coal.md",
+            "title": "Boiled Fish",
+            "type": "food",
+            "keywords": ["fish", "Boiled Fish", "sea food", "fish"]
+        }
     }
-  }
 }
