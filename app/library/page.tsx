@@ -2,8 +2,6 @@ import Link from "next/link";
 import raw from "@/atlas.json";
 import Image from "next/image";
 import { Atlas } from "@/types/atlas";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { searchNodes } from "@/lib/search";
 import { IconMap } from "@/constants/iconMap";
 
@@ -13,11 +11,6 @@ export default function Library() {
     const categories = ["material", "food"];
 
     return (
-        <div className="min-h-screen font-sans antialiased text-[#141414] max-w-275 w-275 mx-auto px-6">
-            {/* Header */}
-            <Header />
-
-            {/* Main Section */}
             <main className="py-10 text-center flex flex-col gap-8">
                 {categories.map((val, ind) => (
                     <div className="items" key={ind}>
@@ -48,8 +41,5 @@ export default function Library() {
                     </div>
                 ))}
             </main>
-            {/* Footer */}
-            <Footer />
-        </div>
     );
 }

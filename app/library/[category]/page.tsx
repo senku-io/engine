@@ -4,8 +4,6 @@ import { searchNodes } from "@/lib/search";
 import Image from "next/image";
 import { IconMap } from "@/constants/iconMap";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 export default async function Category({
     params,
@@ -17,11 +15,6 @@ export default async function Category({
     const search = searchNodes(category, (raw as Atlas).nodes, "type");
 
     return (
-        <div className="min-h-screen font-sans antialiased text-[#141414] max-w-275 w-275 mx-auto px-6">
-            {/* Header */}
-            <Header />
-
-            {/* Main Section */}
             <main className="py-10 text-center flex flex-col gap-8">
                 <div className="items">
                     <h2 className="text-start capitalize font-bold text-xl pb-4">
@@ -48,9 +41,5 @@ export default async function Category({
                     </div>
                 </div>
             </main>
-            
-            {/* Footer */}
-            <Footer />
-        </div>
     );
 }
