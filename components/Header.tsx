@@ -30,7 +30,7 @@ function Header() {
                             <Link href="/library" title="Library">Library</Link>
                         </li>
                         <li className="flex gap-8 text-sm font-medium text-gray-600 hover:text-[#141414] transition-colors">
-                            <a href="https://www.github.com/senku-io/"  target="_blank" title="Senku.io GitHub" rel="noopener noreferrer">Contribute</a>
+                            <a href="/contribute" title="Senku.io GitHub" rel="noopener noreferrer">Contribute</a>
                         </li>
                         <li className="flex gap-8 text-sm font-medium text-gray-600 hover:text-[#141414] transition-colors">
                             <a href="">About</a>

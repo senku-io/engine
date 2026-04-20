@@ -8,10 +8,10 @@ function Footer() {
                         <a href="">Docs</a>
                     </li>
                     <li className="flex justify-center gap-6 text-[13px] text-gray-600 hover:text-gray-900">
-                        <a href="">GitHub</a>
+                        <a href="https://www.github.com/senku-io">GitHub</a>
                     </li>
                     <li className="flex justify-center gap-6 text-[13px] text-gray-600 hover:text-gray-900">
-                        <a href="">Contribute</a>
+                        <a href="/contribute">Contribute</a>
                     </li>
                 </ul>
                 <a href="https://www.flaticon.com/free-icons" className="flex justify-center gap-6 text-[13px] text-gray-600 hover:text-gray-900" title="Icons">Icons created by Flat Icons - Flaticon</a>
