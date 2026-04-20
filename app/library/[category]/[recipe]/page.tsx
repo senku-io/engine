@@ -3,8 +3,6 @@ import { loadMarkdown } from "@/lib/loader";
 import { formatMarkdown } from "@/lib/parser";
 import raw from "@/atlas.json";
 import { Atlas } from "@/types/atlas";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Breadcrumps from "@/components/Breadcrumps";
 
 const converter = new MarkdownIt({
@@ -16,7 +14,7 @@ const converter = new MarkdownIt({
 export default async function Recipe({
     params,
 }: {
-    params: Promise<{ category: string, recipe: string }>;
+    params: Promise<{ category: string; recipe: string }>;
 }) {
     const { category, recipe } = await params;
 
@@ -27,11 +25,7 @@ export default async function Recipe({
     const data = converter.render(content);
 
     return (
-        <div className="min-h-screen font-sans antialiased text-[#141414] min-w-275 max-w-275 mx-auto">
-            {/* Header */}
-            <Header />
-
-            {/* <!-- Breadcrumb --> */}
+        <>
             <Breadcrumps
                 navigations={{
                     library: "/library",
@@ -44,9 +38,6 @@ export default async function Recipe({
             <main className="prose py-4 flex flex-col gap-4">
                 <article dangerouslySetInnerHTML={{ __html: data }}></article>
             </main>
-
-            {/* Footer */}
-            <Footer />
-        </div>
+        </>
     );
 }
