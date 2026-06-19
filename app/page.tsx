@@ -4,8 +4,6 @@ import Link from "next/link";
 import raw from "@/atlas.json";
 import Image from "next/image";
 import { Atlas } from "@/types/atlas";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { searchNodes } from "@/lib/search";
 import { useState } from "react";
 import { IconMap } from "@/constants/iconMap";
