@@ -57,8 +57,8 @@ export default function Home() {
                         <span className="uppercase tracking-wider text-[#28ED58]">
                             [{search.nodes[items].type}]:
                         </span>
-                        <span className="text-[15px] font-medium text-[#141414]">
-                            {search.nodes[items].title}
+                        <span className="text-[15px] font-medium text-[#141414] capitalize">
+                            {search.nodes[items].name}
                         </span>
                     </Link>
                 ))}

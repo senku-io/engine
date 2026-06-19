@@ -15,7 +15,7 @@ export function searchNodes(
             return (
                 key.includes(q) ||
                 value.keywords.includes(q) ||
-                value.title.toLowerCase() === q
+                value.name.toLowerCase() === q
             );
 
         return value[mode].includes(q);

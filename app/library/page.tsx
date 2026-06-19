@@ -33,7 +33,7 @@ export default function Library() {
                                         height={32}
                                     />
                                     <span className="text-[15px] font-medium text-[#141414]">
-                                        {search[items].title}
+                                        {search[items].name}
                                     </span>
                                 </Link>
                             ))}

@@ -1,6 +1,6 @@
 export type AtlasNode = {
     path: string;
-    title: string;
+    name: string;
     type: string;
     keywords: string[];
 };
